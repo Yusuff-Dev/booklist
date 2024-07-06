@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const Login: React.FC = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
     const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setUsername(event.target.value);
@@ -12,6 +13,10 @@ const Login: React.FC = () => {
 
     const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setPassword(event.target.value);
+    };
+
+    const handleConfirmPasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setConfirmPassword(event.target.value);
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -25,19 +30,43 @@ const Login: React.FC = () => {
             <form onSubmit={handleSubmit}>
                 <div className='flex flex-col gap-1 mb-4'>
                     <label htmlFor="username" className='text-sm font-medium'>Username</label>
-                    <TextField size='small' id="outlined-basic" variant="outlined" placeholder='Input your name' />
+                    <TextField 
+                    size='small' 
+                    id="outlined-basic" 
+                    variant="outlined" 
+                    placeholder='Input your name' 
+                    value={username}
+                    onChange={handleUsernameChange}
+                    />
                 </div>
                 <div className='flex flex-col gap-1 mb-4'>
                     <label htmlFor="password" className='text-sm font-medium'>Password</label>
-                    <TextField size='small' id="outlined-basic" variant="outlined" placeholder='Input your password' />
+                    <TextField 
+                    size='small' 
+                    id="outlined-basic" 
+                    variant="outlined" 
+                    placeholder='Input your password' 
+                    type='password'
+                    value={password}
+                    onChange={handlePasswordChange}
+                    />
                 </div>
                 <div className='flex flex-col gap-1 mb-9'>
                     <label htmlFor="password" className='text-sm font-medium'>Confirm Password</label>
-                    <TextField size='small' id="outlined-basic" variant="outlined" placeholder='Enter your confirm password' />
+                    <TextField 
+                    size='small' 
+                    id="outlined-basic" 
+                    variant="outlined" 
+                    placeholder='Enter your confirm password' 
+                    type='password'
+                    value={confirmPassword}
+                    onChange={handleConfirmPasswordChange}
+                    />
                 </div>
 
                 <div>
                     <Button
+                        type='submit'
                         variant="contained"
                         className='w-full !font-mulish !capitalize !text-base'>Submit
                     </Button>

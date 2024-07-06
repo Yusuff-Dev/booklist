@@ -6,8 +6,8 @@ function Layout() {
   return (
     <div className='bg h-screen container flex items-center justify-center'>
         {/* <SignIn/> */}
-        {/* <SignUp/> */}
-        <NotFound/>
+        <SignUp/>
+        {/* <NotFound/> */}
     </div>
   )
 }

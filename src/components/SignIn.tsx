@@ -25,11 +25,24 @@ const Login: React.FC = () => {
             <form onSubmit={handleSubmit}>
                 <div className='flex flex-col gap-1 mb-4'>
                     <label htmlFor="username" className='text-sm font-medium'>Username</label>
-                    <TextField size='small' id="outlined-basic" variant="outlined" placeholder='Input your name' />
+                    <TextField 
+                    size='small' 
+                    id="outlined-basic" 
+                    variant="outlined" 
+                    placeholder='Input your name' 
+                    value={username}
+                    onChange={handleUsernameChange}/>
                 </div>
                 <div className='flex flex-col gap-1 mb-9'>
                     <label htmlFor="password" className='text-sm font-medium'>Password</label>
-                    <TextField size='small' id="outlined-basic" variant="outlined" placeholder='Input your password' />
+                    <TextField 
+                    size='small' 
+                    id="outlined-basic" 
+                    variant="outlined" 
+                    placeholder='Input your password'
+                    type='password'
+                    value={password} 
+                    onChange={handlePasswordChange}/>
                 </div>
                 <div>
                     <Button
