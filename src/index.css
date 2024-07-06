@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  html, body {
+    font-family: 'Mulish', sans-serif;
+  }
+}
+
+.bg {
+  background: url("./assets/bg-shape.svg") no-repeat top left;
+}
