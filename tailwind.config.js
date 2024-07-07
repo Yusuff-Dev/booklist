@@ -15,7 +15,11 @@ export default {
         "2xl": "6rem",
       },
     },
-    extend: {},
+    extend: {
+      colors: {
+        'dark-blue': '#6200EE',
+      },
+    },
   },
   plugins: [],
 };
