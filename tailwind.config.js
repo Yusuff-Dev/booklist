@@ -18,6 +18,7 @@ export default {
     extend: {
       colors: {
         'dark-blue': '#6200EE',
+        red: '#FF4D4F',
       },
     },
   },
